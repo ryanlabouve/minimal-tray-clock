@@ -1,20 +1,21 @@
 {
-  "name": "electron-quick-start",
+  "name": "minimal-tray-clock",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal clock for your tray",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ryanlabouve/minimal-tray-clock",
+  "productName": "MTC",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "wow",
+    "amaze",
+    "clock",
+    "tray"
   ],
-  "author": "GitHub",
+  "author": "ryanlabouve",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.7.8"
