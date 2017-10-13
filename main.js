@@ -1,6 +1,6 @@
 const { app, Tray, Menu, BrowserWindow } = require('electron');
 const path = require('path');
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 let appIcon = null;
 let win = null;
@@ -23,7 +23,25 @@ let contextMenu = () => {
       type: 'separator'
     },
     {
-      label: 'quit',
+      label: moment().tz('America/Los_Angeles').format('h:mm a zz') + '\tWest coast'
+    },
+    {
+      label: moment().tz('America/Denver').format('h:mm a zz') + '\tDenver'
+    },
+    {
+      label: moment().tz('America/North_Dakota/Center').format('h:mm a zz') + '\tOKC'
+    },
+    {
+      label: moment().tz('America/New_York').format('h:mm a zz') + '\tNew York'
+    },
+    {
+      label: moment().tz('Europe/London').format('h:mm a zz') + '\tLondon'
+    },
+    {
+      type: 'separator'
+    },
+    {
+      label: 'Quit',
       accelerator: 'Command+q',
       selector: 'terminate:'
     }
