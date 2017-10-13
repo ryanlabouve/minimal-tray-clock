@@ -9,3 +9,7 @@ Here, we see it's 10. So we know we aren't screwed if we stay up longer. But we 
 Grab the app: http://take.ms/yfUH7
 
 It's my first electron app, will it kill your battery? I have no clue. But I'm running it on my computer. And I'm also open to PR's.
+
+----
+
+Ty to https://github.com/electron-userland/electron-packager. Was used to generate the `.app`
