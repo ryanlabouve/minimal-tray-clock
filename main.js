@@ -41,6 +41,7 @@ let setupClock = (tray) => {
 }
 
 app.on('ready', () => {
+  app.dock.hide();
   win = new BrowserWindow({ show: false });
   tray = new Tray(iconPath());
   setInterval(() => setupClock(tray), 1000);
