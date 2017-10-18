@@ -7,11 +7,15 @@ let win = null;
 let isOpen = null;
 
 let time = () => {
-  return moment().format('h:mm a');
+  return moment().format('hh:mm a');
 };
 
 let timeHour = () => {
   return moment().format('h');
+}
+
+let getTimeWithFormat = (momentTz) => {
+  return momentTz.format('hh:mm a zz');
 }
 
 let contextMenu = () => {
@@ -23,19 +27,19 @@ let contextMenu = () => {
       type: 'separator'
     },
     {
-      label: moment().tz('America/Los_Angeles').format('h:mm a zz') + '\tWest coast'
+      label: getTimeWithFormat(moment().tz('America/Los_Angeles')) + '\tWest coast'
     },
     {
-      label: moment().tz('America/Denver').format('h:mm a zz') + '\tDenver'
+      label: getTimeWithFormat(moment().tz('America/Denver')) + '\tDenver'
     },
     {
-      label: moment().tz('America/North_Dakota/Center').format('h:mm a zz') + '\tOKC'
+      label: getTimeWithFormat(moment().tz('America/North_Dakota/Center')) + '\tOKC'
     },
     {
-      label: moment().tz('America/New_York').format('h:mm a zz') + '\tNew York'
+      label: getTimeWithFormat(moment().tz('America/New_York')) + '\tNew York'
     },
     {
-      label: moment().tz('Europe/London').format('h:mm a zz') + '\tLondon'
+      label: getTimeWithFormat(moment().tz('Europe/London')) + '\tLondon'
     },
     {
       type: 'separator'
