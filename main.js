@@ -47,7 +47,7 @@ let contextMenu = () => {
     {
       label: 'Quit',
       accelerator: 'Command+q',
-      selector: 'terminate:'
+      role: 'quit'
     }
   ]);
 };
